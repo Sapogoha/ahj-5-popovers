@@ -32,7 +32,9 @@ export default class Popover {
 
       const button = this.parent.querySelector('.popover-button');
 
-      popoverEl.style.top = `${button.offsetTop - 70}px`;
+      popoverEl.style.top = `${
+        button.offsetTop - popoverEl.offsetHeight - 15
+      }px`;
       popoverEl.style.left = `${
         button.offsetLeft + button.offsetWidth / 2 - popoverEl.offsetWidth / 2
       }px`;
